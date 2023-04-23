@@ -1,0 +1,35 @@
+{
+  "name": "pillar-ext",
+  "displayName": "Pillar Lang",
+  "description": "Pillar Language Highlighting",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hokanosekai/pillar-ext"
+  },
+  "publisher": "pillar-lang",
+  "categories": [
+    "Programming Languages"
+  ],
+  "icon": "icon.png",
+  "contributes": {
+    "languages": [{
+      "id": "pillar",
+      "icon": {
+        "light": "icon.png",
+        "dark": "icon.png"
+      },
+      "aliases": ["Pillar", "pillar"],
+      "extensions": [".pill"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "pillar",
+      "scopeName": "source.pill",
+      "path": "./syntaxes/pillar.tmLanguage.json"
+    }]
+  }
+}

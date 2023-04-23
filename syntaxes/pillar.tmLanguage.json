@@ -1,0 +1,129 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Pillar",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#lang-constant"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#declarations"
+		},
+		{
+			"include": "#reserved-keywords"
+		},
+		{
+			"include": "#ctrl-statements"
+		},
+		{
+			"include": "#booleans"
+		},
+		{
+			"captures": {
+				"1": {
+					"name": "entity.name.function.pillar"
+				}
+			},
+			"match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b\\s*(?=\\()",
+			"name": "meta.function.pillar"
+		},{
+			"captures": {
+				"1": {
+					"name": "entity.object.property.pillar"
+				}
+			},
+			"match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b\\s*(?=\\:)",
+			"name": "meta.property.pillar"
+		}
+	],
+	"repository": {
+		"comments":
+		{
+			"patterns": [
+				{
+					"begin": "/\\*",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.pillar"
+						}
+					},
+					"end": "\\*/",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.pillar"
+						}
+					},
+					"name": "comment.block.pillar"
+				},
+				{
+					"begin": "//",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.pillar"
+						}
+					},
+					"end": "$\\n?",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.pillar"
+						}
+					},
+					"name": "comment.line.pillar"
+				}
+			]
+		},
+		"lang-constant": {
+			"patterns": [{
+				"name": "constant.other.pillar",
+				"match": "\\b(Process|Keyboard|Keys|Windows)\\b"
+			}]
+		},
+		"reserved-keywords": {
+			"patterns": [{
+				"name": "keyword.control.pillar",
+				"match": "\\b(if|else|while|for|return|to|step|import|export)\\b"
+			}]
+		},
+		"declarations": {
+			"patterns": [{
+				"name": "keyword.other.unit.pillar",
+				"match": "\\b(let|const|fn)\\b"
+			}]
+		},
+		"booleans": {
+			"name": "constant.language.pillar",
+			"match": "\\b(true|false)\\b"
+		},
+		"numbers": {
+			"name": "constant.numeric.pillar",
+			"match": "\\b\\d+\\b"
+		},
+		"strings": {
+			"name": "string.quoted.double.pillar",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.pillar",
+					"match": "\\\\."
+				}
+			]
+		},
+		"ctrl-statements": {
+			"name": "keyword.control.pillar",
+			"match": "\\b(break|continue)\\b"
+		}
+	},
+	"scopeName": "source.pill"
+}
