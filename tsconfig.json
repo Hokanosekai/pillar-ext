@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"module": "CommonJS",
+		"target": "esnext",
+		"lib": ["es2020"],
+		"outDir": "out",
+		"sourceMap": false,
+		"strict": true,
+		"rootDir": "src"
+	},
+	"exclude": [
+		"node_modules",
+		".vscode-test"
+	]
+}

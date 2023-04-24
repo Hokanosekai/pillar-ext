@@ -44,7 +44,7 @@
 				}
 			},
 			"match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b\\s*(?=\\:)",
-			"name": "meta.property.pillar"
+			"name": "entity.name.tag"
 		}
 	],
 	"repository": {
@@ -85,7 +85,7 @@
 		},
 		"lang-constant": {
 			"patterns": [{
-				"name": "constant.other.pillar",
+				"name": "entity.name",
 				"match": "\\b(Process|Keyboard|Keys|Windows)\\b"
 			}]
 		},
@@ -97,7 +97,7 @@
 		},
 		"declarations": {
 			"patterns": [{
-				"name": "keyword.other.unit.pillar",
+				"name": "entity.other.attribute-name",
 				"match": "\\b(let|const|fn)\\b"
 			}]
 		},
